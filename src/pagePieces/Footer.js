@@ -51,10 +51,10 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h3>Social Media</h3>
-            <StyledLink to='/'>Instagram</StyledLink>
-            <StyledLink to='/'>Facebook</StyledLink>
+            <a href='https://github.com/nateowen/segs-website'>Git Repo</a>
+            {/* <StyledLink to='/'>Facebook</StyledLink>
             <StyledLink to='/'>Youtube</StyledLink>
-            <StyledLink to='/'>Twitter</StyledLink>
+            <StyledLink to='/'>Twitter</StyledLink> */}
           </div>
         </div>
       </div>
