@@ -47,7 +47,7 @@ function App() {
         <Route path='/team' element={<Team></Team>}>Team</Route>
         <Route path='/blog' element={<Blog isAuth={isAuth}></Blog>}>Blog</Route>
         <Route path='/createPost' element={<CreateBlogPost isAuth={isAuth}></CreateBlogPost>}>Create Blog Post</Route>
-        <Route path='/login' element={<Login setIsAuth={setIsAuth} setIsAdmin={setIsAdmin}/>}>Login</Route>
+        <Route path='/login' element={<Login setIsAuth={setIsAuth}/>}>Login</Route>
       </Routes>
     </Router>
   );

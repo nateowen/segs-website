@@ -19,7 +19,7 @@ nav {
   color: white;
   text-decoration: none;
   position: fixed;
-}
+} */
 
 
 .createPostPage {
@@ -34,7 +34,7 @@ nav {
   height: auto;
   padding: 20px;
   background-color: whitesmoke;
-  border: 3px solid darkorange;
+  border: 3px solid rgb(26, 23, 23);
   border-radius: 12px;
   color: black;
   display: flex;
@@ -82,7 +82,7 @@ nav {
 input,
 textarea {
   margin-top: 5px;
-} */
+}
 
 .loginPage {
   width: 100vw;
@@ -144,7 +144,7 @@ textarea {
 
 .logout-button button:hover {
   color: black;
-}
+} */
 
 .blogPage {
   width: 100%;
@@ -173,9 +173,6 @@ textarea {
   width: 100%;
 }
 
-.postHeader .title {
-  flex: 50%;
-}
 .postHeader .deletePost {
   flex: 50%;
   display: flex;
@@ -185,7 +182,6 @@ textarea {
 
 .deletePost button {
   border: none;
-
   background: none;
   font-size: 30px;
   cursor: pointer;
@@ -198,7 +194,7 @@ textarea {
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
-}  */
+} 
 
 * {
   box-sizing: border-box;
