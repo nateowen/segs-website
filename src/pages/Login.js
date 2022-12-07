@@ -3,15 +3,13 @@ import { auth, provider} from '../segs-firebase'
 import { signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 
-function Login({setIsAuth, setIsAdmin}) {
+function Login({setIsAuth}) {
   let navigate = useNavigate();
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider).then((result) => {
       localStorage.setItem('isAuth', true);
-      localStorage.setItem('isAdmin', true);
       setIsAuth(true);
-      setIsAdmin(true);
       navigate("/");
     });
   };

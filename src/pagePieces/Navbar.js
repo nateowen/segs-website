@@ -5,10 +5,10 @@ import { signOut } from 'firebase/auth'
 import { auth } from '../segs-firebase'
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({isAuth, setIsAuth}) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
+  // const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -62,18 +62,13 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-             <li className='nav-item'>
+            { isAuth && <li className='nav-item'>
               <Link to='/createPost' className='nav-links'>
                 Create Blog Post
               </Link>
-            </li>
-            {/* <li>
-              <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign Up
-              </Link>
-            </li> */}
+            </li> }
           </ul>
-          {/* { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button buttonStyle='btn--outline'>Sign Out</Button> } */}
+          { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button onClick={signUserOut} buttonStyle='btn--outline'>Sign Out</Button> }
         </div>
       </nav>
     </>

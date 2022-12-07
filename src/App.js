@@ -15,20 +15,19 @@ import CreateBlogPost from './pages/CreateBlogPost';
 function App() {
 
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
-  const [isAmin, setIsAdmin] = useState(localStorage.getItem('isAuth'));
+  // const [isAmin, setIsAdmin] = useState(localStorage.getItem('isAuth'));
 
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      setIsAdmin(false);
       window.location.pathname = '/login';
     });
   };
 
   return (
     <Router>
-      <Navbar/>
+      <Navbar isAuth={isAuth} setIsAuth={setIsAuth}/>
       {/* <nav>
         <Link to='/'>Home</Link>
         <Link to='/segways'>Segways</Link>
