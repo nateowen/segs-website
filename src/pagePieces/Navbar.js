@@ -67,8 +67,11 @@ function Navbar({isAuth, setIsAuth}) {
                 Create Blog Post
               </Link>
             </li> }
+            { !isAuth ? <li className='nav-item'> <Link to='/login' className='nav-links'>Login</Link> </li> :
+              <li className='nav-item'> <Link onClick={signUserOut} className='nav-links'>Sign Out</Link> </li>
+            }
           </ul>
-          { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button onClick={signUserOut} buttonStyle='btn--outline'>Sign Out</Button> }
+          {/* { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button onClick={signUserOut} buttonStyle='btn--outline'>Sign Out</Button> } */}
         </div>
       </nav>
     </>
