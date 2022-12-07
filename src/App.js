@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <Router basename='/local260/segs-website/build/'>
+    <Router>
       <Navbar isAuth={isAuth} setIsAuth={setIsAuth}/>
       {/* <nav>
         <Link to='/'>Home</Link>
