@@ -67,11 +67,11 @@ function Navbar() {
                 Create Blog Post
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Sign Up
               </Link>
-            </li>
+            </li> */}
           </ul>
           {/* { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button buttonStyle='btn--outline'>Sign Out</Button> } */}
         </div>
