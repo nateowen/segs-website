@@ -1,6 +1,8 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import ProductItem from './ProductItem'
+import { productsArray } from '../productsStore'
 
 function Cards() {
   return (
@@ -9,27 +11,31 @@ function Cards() {
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
-            <CardItem
+            <ProductItem
               src={require('../images/s-plus.png')}
               text='Segway S Plus - Top of the line, award winning, and most dependable Segway on the market.'
-              label='Favorite'
+              label='$999.99'
+              id='1'
             />
-            <CardItem
+            <ProductItem
               src={require('../images/ninebot-s.png')}
-              text='Ninebot S - Premium Segway scooter'
-              label='Best Seller'
+              text='Ninebot S - Premium Segway scooter. For those who just want to have a good time.'
+              label='$750.99'
+              id='2'
             />
           </ul>
           <ul className='cards__items'>
-            <CardItem
+            <ProductItem
               src={require('../images/ninebot-kids.png')}
               text='Ninebot S Kids - Same great scooter made for your little ones.'
-              label='Kid Friendly'
+              label='$650.99'
+              id='3'
             />
-            <CardItem
+            <ProductItem
               src={require('../images/ninebot-one-s1.jpeg')}
               text='Ninebot One S1 - Top awarded one-wheel scooter on the market.'
-              label='Experts'
+              label='$550.99'
+              id='4'
             />
           </ul>
         </div>

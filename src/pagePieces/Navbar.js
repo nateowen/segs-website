@@ -25,9 +25,17 @@ function Navbar({isAuth, setIsAuth}) {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      window.location.pathname = '/';
+      window.location.pathname = '/local260/segs-website/build';
     });
   };
+
+  const goToLogin = () => {
+    window.location.pathname = '/local260/segs-website/build/login';
+  }
+
+  const goToCart = () => {
+    window.location.pathname = '/local260/segs-website/build/cart';
+  }
 
   useEffect(() => {
     showButton();
@@ -58,6 +66,11 @@ function Navbar({isAuth, setIsAuth}) {
               </Link>
             </li>
             <li className='nav-item'>
+              <Link to='/segways' className='nav-links' onClick={closeMobileMenu}>
+                Products
+              </Link>
+            </li>
+            <li className='nav-item'>
               <Link to='/blog' className='nav-links' onClick={closeMobileMenu}>
                 Blog
               </Link>
@@ -67,11 +80,19 @@ function Navbar({isAuth, setIsAuth}) {
                 Create Blog Post
               </Link>
             </li> }
-            { !isAuth ? <li className='nav-item'> <Link to='/login' className='nav-links'>Login</Link> </li> :
-              <li className='nav-item'> <Link onClick={signUserOut} className='nav-links'>Sign Out</Link> </li>
-            }
+            {/* { !isAuth ? 
+              <li className='nav-item'> 
+                <Link to='/login' className='nav-links'>Login</Link> 
+              </li> :
+              <li className='nav-item'> 
+                <Link onClick={signUserOut} className='nav-links'>Sign Out</Link>
+              </li>
+            } */}
           </ul>
-          {/* { !isAuth ? button && <Button buttonStyle='btn--outline'>Login</Button> : button && <Button onClick={signUserOut} buttonStyle='btn--outline'>Sign Out</Button> } */}
+          { !isAuth ? button && <Button buttonStyle='btn--outline' onClick={goToLogin}>Login</Button> :
+            button && <Button onClick={signUserOut} buttonStyle='btn--outline'>Sign Out</Button> }
+          
+          <Button buttonStyle='cart--button' onClick={goToCart}>&#x1F6D2;</Button>
         </div>
       </nav>
     </>
