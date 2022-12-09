@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { db } from '../segs-firebase'
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
-import { productsArray } from '../productsStore';
-import { addDoc, collection, deleteDoc, getDocs } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom'
+import { addDoc, collection } from 'firebase/firestore';
 
 function ProductItem(props) {
     const shoppingCartRef = collection(db, 'Cart');

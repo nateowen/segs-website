@@ -8,7 +8,6 @@ import './Navbar.css';
 function Navbar({isAuth, setIsAuth}) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  // const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -30,11 +29,11 @@ function Navbar({isAuth, setIsAuth}) {
   };
 
   const goToLogin = () => {
-    window.location.pathname = '/local260/segs-website/build/login';
+    window.location.pathname = '/login';
   }
 
   const goToCart = () => {
-    window.location.pathname = '/local260/segs-website/build/cart';
+    window.location.pathname = '/cart';
   }
 
   useEffect(() => {

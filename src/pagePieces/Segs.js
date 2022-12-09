@@ -1,8 +1,6 @@
 import React from 'react';
 import './Cards.css';
-import CardItem from './CardItem';
 import ProductItem from './ProductItem'
-import { productsArray } from '../productsStore'
 
 function Cards() {
   return (
